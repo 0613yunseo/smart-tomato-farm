@@ -1,0 +1,12 @@
+erDiagram
+ GREENHOUSES ||--o{ ZONES : contains
+ ZONES ||--o{ SENSORS : has
+ SENSORS ||--o{ SENSOR_READINGS : measures
+ ZONES ||--o{ DEVICES : has
+ DEVICES ||--o{ CONTROL_LOGS : logs
+ SENSORS ||--o{ CONTROL_RULES : triggers
+ ZONES ||--o{ NUTRIENT_RECORDS : records
+ ZONES ||--o{ CROP_CYCLES : cultivates
+ CROP_CYCLES ||--o{ GROWTH_RECORDS : monitors
+ CROP_CYCLES ||--o{ HARVEST_RECORDS : yields
+ ZONES ||--o{ ALERTS : alerts

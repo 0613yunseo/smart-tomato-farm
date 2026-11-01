@@ -1,0 +1,7 @@
+flowchart TB
+  S[환경 센서: 온습도 / CO₂ / 일사량 / EC / pH] --> G[IoT Gateway: ESP32 / Raspberry Pi]
+  G <--> M[MQTT Broker]
+  M <--> B[Spring Boot Backend]
+  B <--> D[(PostgreSQL)]
+  B <--> W[React Dashboard]
+  G --> A[현장 제어 장치: 환기팬 / 급액 펌프]

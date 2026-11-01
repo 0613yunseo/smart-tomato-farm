@@ -1,0 +1,11 @@
+sequenceDiagram
+participant S as 센서
+participant I as IoT 장치
+participant B as Spring Boot
+participant D as PostgreSQL
+participant W as 웹 대시보드
+S->>I: 측정값 전달
+I->>B: MQTT 센서 데이터
+B->>D: 측정 데이터 저장
+D-->>B: 저장 완료
+B-->>W: WebSocket 갱신

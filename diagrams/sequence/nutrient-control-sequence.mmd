@@ -1,0 +1,13 @@
+sequenceDiagram
+participant S as 센서/스케줄
+participant B as Spring Boot
+participant I as IoT 제어기
+participant P as 급액 펌프
+participant D as PostgreSQL
+S->>B: 급액 조건 전달
+B->>B: 제어 조건 검증
+B->>I: 급액 명령
+I->>P: 펌프 작동
+I->>P: 펌프 정지
+I-->>B: 실행 결과
+B->>D: 제어 이력 저장
